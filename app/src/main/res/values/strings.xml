@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TryBoardGames</string>
+    <string name="start_message">Open the camera by pressing the button and scan the barcode of the board game that you want to play!</string>
+    <string name="button_camera">Camera</string>
+
 </resources>
