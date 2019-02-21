@@ -24,8 +24,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void scanBarcode(View view) {
 
-    public void openCameraApp(View view){
+        Intent intent = new Intent(this, BarcodeDetectActivity.class);
+        Log.d("MainActivity", "start Barcode activity");
+        startActivity(intent);
+    }
+
+
+     public void openCameraApp(View view){
 
         //Intent intent = new Intent(this, CameraActivity.class);
         Intent intent = new Intent(this, YoutubeListActiviy.class);
