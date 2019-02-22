@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.project.tryboardgames.R;
 import com.project.tryboardgames.models.YoutubeDataModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -51,7 +52,7 @@ public class VideoPostAdapter extends RecyclerView.Adapter<VideoPostAdapter.Yout
         tv_desc.setText(object.getDesciption());
         tv_date.setText(object.getDate());
 
-        // TODO: image will be downladed from url
+        Picasso.with(context).load(object.getThumbnail()).into(thumbnail);
 
     }
 
@@ -77,6 +78,8 @@ public class VideoPostAdapter extends RecyclerView.Adapter<VideoPostAdapter.Yout
             this.tv_desc = (TextView) itemView.findViewById(R.id.tv_desc);
             this.tv_date = (TextView) itemView.findViewById(R.id.tv_date);
             this.thumbnail = (ImageView) itemView.findViewById(R.id.thumbnail);
+
+
 
         }
 

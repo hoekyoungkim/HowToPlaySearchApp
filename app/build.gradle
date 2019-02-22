@@ -44,5 +44,6 @@ dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     api 'com.squareup.okhttp:okhttp:2.3.0'
     api 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    api 'com.squareup.picasso:picasso:2.5.2'
 
 }
