@@ -42,5 +42,7 @@ dependencies {
     implementation files('libs/google-oauth-client-1.25.0.jar')
     implementation files('libs/jsr305-3.0.2.jar')
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    api 'com.squareup.okhttp:okhttp:2.3.0'
+    api 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
 
 }

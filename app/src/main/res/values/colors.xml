@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="myMint">#B9D3D2</color>
+    <color name="myLavender">#EEDAEA</color>
+    <color name="myPink">#EEDAEA</color>
+    <color name="livingcoral">#FF6F61</color>
+
 </resources>
