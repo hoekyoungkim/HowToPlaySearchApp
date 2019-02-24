@@ -57,6 +57,7 @@ public class YoutubeFragment extends Fragment {
         new RequestYoutubeAPI().execute();
         return view;
     }
+
     public void initList(ArrayList<YoutubeDataModel> list_data){
 
         list_videos.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -72,9 +73,11 @@ public class YoutubeFragment extends Fragment {
 
         @Override
         protected String doInBackground(Void... voids) {
+
             HttpClient httpClient = new DefaultHttpClient();
             HttpGet httpGet = new HttpGet(query_start+query+query_end+YOUTUBE_API_KEY);
-            Log.e("URL", query_start+query+query_end+YOUTUBE_API_KEY);
+            Log.e("Youtube URL", query_start+query+query_end+YOUTUBE_API_KEY);
+
             try{
 
                 HttpResponse response = httpClient.execute(httpGet);
@@ -90,7 +93,6 @@ public class YoutubeFragment extends Fragment {
         @Override
         protected void onPostExecute(String response) {
             super.onPostExecute(response);
-
             if(response != null){
 
                 try{
@@ -111,6 +113,7 @@ public class YoutubeFragment extends Fragment {
             ArrayList<YoutubeDataModel> list = new ArrayList<>();
 
             if(jsonObject.has("items")){
+
                 try{
 
                     JSONArray jsonArray = jsonObject.getJSONArray("items");
