@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ import com.project.tryboardgames.R;
 import com.project.tryboardgames.models.YoutubeDataModel;
 import com.squareup.picasso.Picasso;
 
+import com.project.tryboardgames.interfaces.OnItemClickListener;
 import java.util.ArrayList;
 
 
@@ -23,11 +25,13 @@ public class VideoPostAdapter extends RecyclerView.Adapter<VideoPostAdapter.Yout
 
     private ArrayList<YoutubeDataModel> dataSet;
     private Context context = null;
+    private final OnItemClickListener listener;
 
 
-    public VideoPostAdapter(Context context, ArrayList<YoutubeDataModel> dataSet){
+    public VideoPostAdapter(Context context, ArrayList<YoutubeDataModel> dataSet, OnItemClickListener listner){
         this.dataSet = dataSet;
         this.context = context;
+        this.listener = listner;
     }
 
     @Override
@@ -48,9 +52,12 @@ public class VideoPostAdapter extends RecyclerView.Adapter<VideoPostAdapter.Yout
         ImageView thumbnail = holder.thumbnail;
 
         YoutubeDataModel object = dataSet.get(position);
+
         tv_title.setText(object.getTitle());
         tv_desc.setText(object.getDesciption());
         tv_date.setText(object.getDate());
+
+        holder.bind(dataSet.get(position), listener);
 
         Picasso.with(context).load(object.getThumbnail()).into(thumbnail);
 
@@ -59,19 +66,17 @@ public class VideoPostAdapter extends RecyclerView.Adapter<VideoPostAdapter.Yout
 
     @Override
     public int getItemCount() {
-
-
         return dataSet.size();
     }
 
-    public static class YoutubePostHolder extends RecyclerView.ViewHolder{
+    public static class YoutubePostHolder extends RecyclerView.ViewHolder {
 
-        TextView  tv_title;
+        TextView tv_title;
         TextView tv_desc;
         TextView tv_date;
         ImageView thumbnail;
 
-        public YoutubePostHolder (View itemView){
+        public YoutubePostHolder(View itemView) {
 
             super(itemView);
             this.tv_title = (TextView) itemView.findViewById(R.id.tv_title);
@@ -80,15 +85,18 @@ public class VideoPostAdapter extends RecyclerView.Adapter<VideoPostAdapter.Yout
             this.thumbnail = (ImageView) itemView.findViewById(R.id.thumbnail);
 
 
-
         }
 
-    }
 
-    public class YoutubuePostHolder {
+        public void bind(final YoutubeDataModel item, final OnItemClickListener listener) {
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(item);
+                }
+            });
+        }
     }
-
 
 }
-
 

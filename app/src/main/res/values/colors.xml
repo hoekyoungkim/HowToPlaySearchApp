@@ -7,5 +7,9 @@
     <color name="myLavender">#EEDAEA</color>
     <color name="myPink">#EEDAEA</color>
     <color name="livingcoral">#FF6F61</color>
+    <color name="black">#000000</color>
+    <color name="darkGrey">#282923</color>
+    <color name="white">#FFFFFF</color>
+
 
 </resources>

@@ -1,9 +1,11 @@
-package com.project.tryboardgames;
+package com.project.tryboardgames.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TextView;
+
+import com.project.tryboardgames.MainActivity;
+import com.project.tryboardgames.R;
 
 public class CameraActivity extends AppCompatActivity {
 

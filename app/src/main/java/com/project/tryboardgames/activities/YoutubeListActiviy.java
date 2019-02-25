@@ -1,4 +1,4 @@
-package com.project.tryboardgames;
+package com.project.tryboardgames.activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.project.tryboardgames.R;
+
 
 public class YoutubeListActiviy extends AppCompatActivity{
 //    public class YoutubeListActiviy extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
@@ -18,6 +20,7 @@ public class YoutubeListActiviy extends AppCompatActivity{
 
     private TabLayout tabLayout = null;
     private ViewPager viewPager = null;
+    private String KEY_WORD = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,10 @@ public class YoutubeListActiviy extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube_list_activiy);
         Log.d("YoutubeListActiviy", "onCreate: Starting.");
+
+        if(savedInstanceState!= null){
+            KEY_WORD = getIntent().getExtras().getString("KEY_WORD","");
+        }
 
         // tab setting
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);

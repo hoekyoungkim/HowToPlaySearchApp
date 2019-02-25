@@ -1,5 +1,7 @@
-package com.project.tryboardgames;
+package com.project.tryboardgames.activities;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -13,15 +15,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.android.gms.vision.barcode.*;
 import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+import com.project.tryboardgames.R;
 
 import java.io.IOException;
 
 public class BarcodeDetectActivity extends AppCompatActivity {
 
+    private Handler mHandler = new Handler();
+
+    private String BARCODE_VALUE = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,13 +41,14 @@ public class BarcodeDetectActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                callResult();
             }
         });
 
         ImageView myImageView = (ImageView) findViewById(R.id.imgview);
         Bitmap myBitmap = BitmapFactory.decodeResource(
                 getApplicationContext().getResources(),
-                R.drawable.puppy);
+                R.drawable.qr_jenga);
         myImageView.setImageBitmap(myBitmap);
 
         BarcodeDetector detector =
@@ -58,6 +67,7 @@ public class BarcodeDetectActivity extends AppCompatActivity {
             Barcode thisCode = barcodes.valueAt(0);
             TextView txtView = (TextView) findViewById(R.id.txtContent);
             txtView.setText(thisCode.rawValue);
+            BARCODE_VALUE = thisCode.rawValue;
 
         }catch (Exception e) {
             e.printStackTrace();
@@ -65,5 +75,14 @@ public class BarcodeDetectActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    public void callResult(){
+        if(BARCODE_VALUE!= null){
+            Intent intent = new Intent(getApplicationContext(), YoutubeListActiviy.class);
+            intent.putExtra("KEY_WORD", BARCODE_VALUE);
+            startActivity(intent);
+
+        }
     }
 }

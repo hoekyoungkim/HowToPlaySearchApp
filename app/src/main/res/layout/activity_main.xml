@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:background="@color/myMint"
+    android:background="@color/darkGrey"
     tools:context=".MainActivity">
 
     <TextView
@@ -20,7 +20,7 @@
         android:ellipsize="end"
         android:singleLine="false"
         android:text="@string/start_message"
-
+        android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="18sp"
 

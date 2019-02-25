@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BarcodeDetectActivity">
+    tools:context=".activities.BarcodeDetectActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,15 +21,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="46dp"
             android:layout_marginEnd="46dp"
-            android:text="" />
+            android:textSize="20dp"
+            android:text="QR Code Content:" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:text="Process" />
+
 
         <ImageView
             android:id="@+id/imgview"
@@ -41,7 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Button"
+            android:onClick="callResult"
+            android:text="Process"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="21dp" />
 
@@ -56,4 +52,4 @@
 
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

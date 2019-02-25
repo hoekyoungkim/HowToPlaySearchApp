@@ -18,8 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".BarcodeDetectActivity"></activity>
+        <activity android:name=".activities.YoutubeDetailsActivity"></activity>
+        <activity android:name=".activities.BarcodeDetectActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,11 +33,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".YoutubeListActiviy"
+            android:name=".activities.YoutubeListActiviy"
             android:parentActivityName=".MainActivity" />
-
         <activity
-            android:name=".CameraActivity"
+            android:name=".activities.CameraActivity"
             android:parentActivityName=".MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -45,7 +44,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

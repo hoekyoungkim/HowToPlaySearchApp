@@ -1,6 +1,7 @@
 package com.project.tryboardgames.fragments;
 
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,8 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.project.tryboardgames.R;
+import com.project.tryboardgames.activities.YoutubeDetailsActivity;
 import com.project.tryboardgames.adapters.VideoPostAdapter;
 import com.project.tryboardgames.models.YoutubeDataModel;
+import com.project.tryboardgames.interfaces.OnItemClickListener;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -61,7 +64,17 @@ public class YoutubeFragment extends Fragment {
     public void initList(ArrayList<YoutubeDataModel> list_data){
 
         list_videos.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new VideoPostAdapter(getActivity(), list_data);
+
+        adapter = new VideoPostAdapter(getActivity(), list_data, new OnItemClickListener() {
+            @Override
+            public void onItemClick(YoutubeDataModel item) {
+                YoutubeDataModel youtubeDataModel = item;
+                Intent intent = new Intent(getActivity(), YoutubeDetailsActivity.class);
+                intent.putExtra(YoutubeDataModel.class.toString(), youtubeDataModel);
+                startActivity(intent);
+            }
+        });
+
         list_videos.setAdapter(adapter);
     }
 
@@ -129,13 +142,21 @@ public class YoutubeFragment extends Fragment {
 
                                 if(jsonID.getString("kind").equals("youtube#video")){
 
+                                    YoutubeDataModel youtube = new YoutubeDataModel();
                                     JSONObject jsonSnippet = json.getJSONObject("snippet");
                                     String title = jsonSnippet.getString("title");
                                     String description = jsonSnippet.getString("description");
                                     String date = jsonSnippet.getString("publishedAt");
                                     String thumbnail = jsonSnippet.getJSONObject("thumbnails").getJSONObject("high").getString("url");
+                                    String video_id = "";
 
-                                    YoutubeDataModel youtube = new YoutubeDataModel();
+                                    if(jsonID.has("videoId")){
+
+                                        video_id = jsonID.getString("videoId");
+                                        Log.e("YOUTUBE FRAGMENT", "VIDEO ID IS "+video_id);
+                                    }
+
+                                    youtube.setVideo_id(video_id);
                                     youtube.setTitle(title);
                                     youtube.setDate(date);
                                     youtube.setDesciption(description);
@@ -144,8 +165,6 @@ public class YoutubeFragment extends Fragment {
                                 }
                             }
                         }
-
-
                     }
 
                 }catch(JSONException e){

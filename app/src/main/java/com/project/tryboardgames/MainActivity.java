@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.project.tryboardgames.R;
+import com.project.tryboardgames.activities.BarcodeDetectActivity;
+import com.project.tryboardgames.activities.YoutubeListActiviy;
+
 
 public class MainActivity extends AppCompatActivity {
 
