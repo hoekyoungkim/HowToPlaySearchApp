@@ -5,7 +5,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.project.howtoplaysearchapp.R;
 
@@ -24,6 +26,8 @@ public class YoutubeListActiviy extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube_list_activiy);
         Log.d("YoutubeListActiviy", "onCreate: Starting.");
+
+
 
         Bundle extras = getIntent().getExtras();
         if(extras != null){

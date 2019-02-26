@@ -132,6 +132,7 @@ public class WikipediaFragment extends Fragment {
                             //R.id.wiki_extract = contents.getString("extract");
                             TextView wiki_extract = (TextView) getView().findViewById(R.id.wiki_extract);
                             wiki_extract.setText(contents.getString("extract"));
+
                         }
                         if(contents.has("title")){
                             Log.e("parsed Wiki Content !!!", contents.getString("title"));

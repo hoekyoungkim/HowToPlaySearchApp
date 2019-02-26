@@ -55,7 +55,7 @@ public class BarcodeDetectActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }else{
-            imageBitmap = BitmapFactory.decodeResource( getApplicationContext().getResources(), R.drawable.qr_jenga_rotate);
+            imageBitmap = BitmapFactory.decodeResource( getApplicationContext().getResources(), R.drawable.qr_monopoly);
             imageView.setImageBitmap(imageBitmap);
 
         }
