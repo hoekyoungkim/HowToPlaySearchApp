@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:onClick="callResult"
+            android:onClick="processBarcode"
             android:text="Process"
             app:layout_constraintEnd_toEndOf="parent"
             tools:layout_editor_absoluteY="21dp" />

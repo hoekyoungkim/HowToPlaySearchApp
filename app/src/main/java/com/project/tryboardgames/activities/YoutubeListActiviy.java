@@ -20,7 +20,7 @@ public class YoutubeListActiviy extends AppCompatActivity{
 
     private TabLayout tabLayout = null;
     private ViewPager viewPager = null;
-    private String KEY_WORD = "";
+    public String KEY_WORD = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,8 @@ public class YoutubeListActiviy extends AppCompatActivity{
         setContentView(R.layout.activity_youtube_list_activiy);
         Log.d("YoutubeListActiviy", "onCreate: Starting.");
 
-        if(savedInstanceState!= null){
+        Bundle extras = getIntent().getExtras();
+        if(extras != null){
             KEY_WORD = getIntent().getExtras().getString("KEY_WORD","");
         }
 

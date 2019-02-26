@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.project.tryboardgames.R;
 import com.project.tryboardgames.activities.YoutubeDetailsActivity;
+import com.project.tryboardgames.activities.YoutubeListActiviy;
 import com.project.tryboardgames.adapters.VideoPostAdapter;
 import com.project.tryboardgames.models.YoutubeDataModel;
 import com.project.tryboardgames.interfaces.OnItemClickListener;
@@ -39,7 +40,7 @@ public class YoutubeFragment extends Fragment {
     private static String YOUTUBE_API_KEY = "AIzaSyAZmYPmEBf-8JqyAQGzFMhvzVOmrzhuF9o";
     private static String query_start = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&order=date&q=How%20to%20play%20";
     private static String query_end = "&key=";
-    private static String query = "Jenga";
+    private static String query = "";
 
     private RecyclerView list_videos = null;
     private VideoPostAdapter adapter = null;
@@ -57,6 +58,13 @@ public class YoutubeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_youtube, container, false);
         list_videos = (RecyclerView) view.findViewById(R.id.list_videos);
         initList(list_data);
+
+
+        Log.e("Youtube Fragment","??????????????????");
+        query = ((YoutubeListActiviy) getActivity()).KEY_WORD;
+        Log.e("Youtube Fragment","query "+query);
+
+
         new RequestYoutubeAPI().execute();
         return view;
     }

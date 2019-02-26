@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.project.tryboardgames.R;
+import com.project.tryboardgames.activities.CameraActivity;
+import com.project.tryboardgames.activities.BarcodeDetectActivity;
+import com.project.tryboardgames.activities.YoutubeListActiviy;
 import com.project.tryboardgames.models.YoutubeDataModel;
 
 import org.apache.http.HttpEntity;
@@ -36,7 +39,7 @@ public class WikipediaFragment extends Fragment {
 
     private String query_start = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=";
     private String query_end  = "";
-    private String query = "Jenga";
+    private String query = "";
 
 
     private String result = "";
@@ -50,6 +53,12 @@ public class WikipediaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_wikipedia, container, false);
+
+        Log.e("Wikipedia Fragment","??????????????????");
+        query = ((YoutubeListActiviy) getActivity()).KEY_WORD;
+        Log.e("Wikipedia Fragment","query "+query);
+
+
         new RequestWikipediaAPI().execute();
         return view;
     }

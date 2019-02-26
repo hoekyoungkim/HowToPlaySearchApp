@@ -1,6 +1,7 @@
 package com.project.tryboardgames;
 
 import android.content.Intent;
+import android.graphics.Camera;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 
 import com.project.tryboardgames.R;
 import com.project.tryboardgames.activities.BarcodeDetectActivity;
+import com.project.tryboardgames.activities.CameraActivity;
 import com.project.tryboardgames.activities.YoutubeListActiviy;
 
 
@@ -31,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
      public void openCameraApp(View view){
 
-        Intent intent = new Intent(this, YoutubeListActiviy.class);
+        Intent intent = new Intent(this, CameraActivity.class);
+
+//        Intent intent = new Intent(this, YoutubeListActiviy.class);
         Log.d("MainActivity","get Youtube playlist ************************************************************************");
         startActivity(intent);
     }
