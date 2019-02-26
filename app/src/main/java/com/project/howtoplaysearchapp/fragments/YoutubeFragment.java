@@ -1,4 +1,4 @@
-package com.project.tryboardgames.fragments;
+package com.project.howtoplaysearchapp.fragments;
 
 
 import android.content.Intent;
@@ -12,12 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.project.tryboardgames.R;
-import com.project.tryboardgames.activities.YoutubeDetailsActivity;
-import com.project.tryboardgames.activities.YoutubeListActiviy;
-import com.project.tryboardgames.adapters.VideoPostAdapter;
-import com.project.tryboardgames.models.YoutubeDataModel;
-import com.project.tryboardgames.interfaces.OnItemClickListener;
+import com.project.howtoplaysearchapp.R;
+import com.project.howtoplaysearchapp.activities.YoutubeDetailsActivity;
+import com.project.howtoplaysearchapp.activities.YoutubeListActiviy;
+import com.project.howtoplaysearchapp.adapters.VideoPostAdapter;
+import com.project.howtoplaysearchapp.models.YoutubeDataModel;
+import com.project.howtoplaysearchapp.interfaces.OnItemClickListener;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

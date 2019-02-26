@@ -1,4 +1,4 @@
-package com.project.tryboardgames.fragments;
+package com.project.howtoplaysearchapp.fragments;
 
 
 import android.os.AsyncTask;
@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.project.tryboardgames.R;
-import com.project.tryboardgames.activities.CameraActivity;
-import com.project.tryboardgames.activities.BarcodeDetectActivity;
-import com.project.tryboardgames.activities.YoutubeListActiviy;
-import com.project.tryboardgames.models.YoutubeDataModel;
+import com.project.howtoplaysearchapp.R;
+import com.project.howtoplaysearchapp.activities.CameraActivity;
+import com.project.howtoplaysearchapp.activities.BarcodeDetectActivity;
+import com.project.howtoplaysearchapp.activities.YoutubeListActiviy;
+import com.project.howtoplaysearchapp.models.YoutubeDataModel;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

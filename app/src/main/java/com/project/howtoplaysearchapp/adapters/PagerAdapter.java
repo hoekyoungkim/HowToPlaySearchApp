@@ -1,4 +1,4 @@
-package com.project.tryboardgames.adapters;
+package com.project.howtoplaysearchapp.adapters;
 
 import android.support.v4.app.FragmentStatePagerAdapter;
 
@@ -7,8 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.project.tryboardgames.fragments.WikipediaFragment;
-import com.project.tryboardgames.fragments.YoutubeFragment;
+import com.project.howtoplaysearchapp.fragments.WikipediaFragment;
+import com.project.howtoplaysearchapp.fragments.YoutubeFragment;
 
 
 public class PagerAdapter extends FragmentStatePagerAdapter {

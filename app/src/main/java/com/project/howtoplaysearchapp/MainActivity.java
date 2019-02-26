@@ -1,4 +1,4 @@
-package com.project.tryboardgames;
+package com.project.howtoplaysearchapp;
 
 import android.content.Intent;
 import android.graphics.Camera;
@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.project.tryboardgames.R;
-import com.project.tryboardgames.activities.BarcodeDetectActivity;
-import com.project.tryboardgames.activities.CameraActivity;
-import com.project.tryboardgames.activities.YoutubeListActiviy;
+import com.project.howtoplaysearchapp.R;
+import com.project.howtoplaysearchapp.activities.BarcodeDetectActivity;
+import com.project.howtoplaysearchapp.activities.CameraActivity;
+import com.project.howtoplaysearchapp.activities.YoutubeListActiviy;
 
 
 public class MainActivity extends AppCompatActivity {

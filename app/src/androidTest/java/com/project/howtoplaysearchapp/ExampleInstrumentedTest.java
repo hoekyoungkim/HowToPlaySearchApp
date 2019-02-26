@@ -1,4 +1,4 @@
-package com.project.tryboardgames;
+package com.project.howtoplaysearchapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

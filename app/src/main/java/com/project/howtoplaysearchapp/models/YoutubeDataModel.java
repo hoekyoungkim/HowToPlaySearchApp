@@ -1,4 +1,4 @@
-package com.project.tryboardgames.models;
+package com.project.howtoplaysearchapp.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

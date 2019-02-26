@@ -1,13 +1,10 @@
-package com.project.tryboardgames.activities;
+package com.project.howtoplaysearchapp.activities;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Camera;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -18,14 +15,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.google.android.gms.vision.barcode.Barcode;
-import com.project.tryboardgames.BuildConfig;
-import com.project.tryboardgames.MainActivity;
-import com.project.tryboardgames.R;
+import com.project.howtoplaysearchapp.BuildConfig;
+import com.project.howtoplaysearchapp.R;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

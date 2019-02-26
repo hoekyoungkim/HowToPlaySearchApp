@@ -1,4 +1,4 @@
-package com.project.tryboardgames.activities;
+package com.project.howtoplaysearchapp.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +13,8 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
-import com.project.tryboardgames.R;
-import com.project.tryboardgames.models.YoutubeDataModel;
+import com.project.howtoplaysearchapp.R;
+import com.project.howtoplaysearchapp.models.YoutubeDataModel;
 import com.squareup.picasso.Picasso;
 
 public class YoutubeDetailsActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {

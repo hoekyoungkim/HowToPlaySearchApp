@@ -1,4 +1,4 @@
-package com.project.tryboardgames.adapters;
+package com.project.howtoplaysearchapp.adapters;
 
 import android.content.Context;
 import android.media.Image;
@@ -12,11 +12,11 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.project.tryboardgames.R;
-import com.project.tryboardgames.models.YoutubeDataModel;
+import com.project.howtoplaysearchapp.R;
+import com.project.howtoplaysearchapp.models.YoutubeDataModel;
 import com.squareup.picasso.Picasso;
 
-import com.project.tryboardgames.interfaces.OnItemClickListener;
+import com.project.howtoplaysearchapp.interfaces.OnItemClickListener;
 import java.util.ArrayList;
 
 

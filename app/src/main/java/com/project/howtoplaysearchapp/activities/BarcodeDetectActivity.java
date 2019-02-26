@@ -1,4 +1,4 @@
-package com.project.tryboardgames.activities;
+package com.project.howtoplaysearchapp.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -19,7 +19,7 @@ import android.widget.TextView;
 import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
-import com.project.tryboardgames.R;
+import com.project.howtoplaysearchapp.R;
 
 import java.io.IOException;
 
