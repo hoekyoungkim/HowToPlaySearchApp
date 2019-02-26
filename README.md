@@ -8,9 +8,8 @@
 <h2>What this application does</h2>
 <p>By scanning a QR code, you will get a search result from Youtube and Wikipedia. For example, if you scan a QR code which contains "Monopoly", you will get a bunch of videos on "How to play Monopoly" from Youtube and simple description from Wikipedia. </p>
 
-<h2>Screenshots</h2>
-[![Demo How to Play Search app](https://github.com/hoekyoungkim/HowToPlaySearchApp/blob/master/demo/demo.gif)]
-
+<h2>Demo</h2>
+![](https://github.com/hoekyoungkim/HowToPlaySearchApp/blob/master/demo/demo.gif)
 
 <h2>Video</h2>
 
