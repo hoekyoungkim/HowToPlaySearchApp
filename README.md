@@ -9,9 +9,10 @@
 <p>By scanning a QR code, you will get a search result from Youtube and Wikipedia. For example, if you scan a QR code which contains "Monopoly", you will get a bunch of videos on "How to play Monopoly" from Youtube and simple description from Wikipedia. </p>
 
 <h2>Screenshots</h2>
+[![Demo How to Play Search app](https://github.com/hoekyoungkim/HowToPlaySearchApp/blob/master/demo/demo.gif)]
 
 
 <h2>Video</h2>
 
 <h2>Further Possibilities </h2>
-
+I found BarcodeLookup site(https://www.barcodelookup.com/) has enormous data on barcodes. Unfortunately, they only offer paid plans for API calls but the main concept would be the same as QR codes that I used for tests.
