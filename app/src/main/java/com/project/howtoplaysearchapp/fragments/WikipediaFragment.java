@@ -54,10 +54,8 @@ public class WikipediaFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_wikipedia, container, false);
 
-        Log.e("Wikipedia Fragment","??????????????????");
         query = ((YoutubeListActiviy) getActivity()).KEY_WORD;
         Log.e("Wikipedia Fragment","query "+query);
-
 
         new RequestWikipediaAPI().execute();
         return view;

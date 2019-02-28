@@ -19,7 +19,7 @@ import com.squareup.picasso.Picasso;
 
 public class YoutubeDetailsActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
-    public static final String YOUTUBE_API_KEY = "AIzaSyAZmYPmEBf-8JqyAQGzFMhvzVOmrzhuF9o";
+    public static final String YOUTUBE_API_KEY = ""; // Your API key
     public static final String VIDEO_ID = "";
     private YouTubePlayerView youTubePlayerView = null;
     private YoutubeDataModel youtubeDataModel = null;
@@ -70,23 +70,9 @@ public class YoutubeDetailsActivity extends YouTubeBaseActivity implements YouTu
     public void back_btn_pressed(View view){
         finish();
     }
-    /*
-    public void playVideo(View view){
-        Intent intent = new Intent(this, VideoPlayActivity.class);
-        startActivity(intent);
-    }
-*/
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
 
-
-        /*if(VIDEO_ID != null){
-            youTubePlayer.loadVideo(VIDEO_ID);
-            youTubePlayer.play();
-        }else{
-
-            Log.e("VIDEO ACTIVITY", "VIDEO ID IS NULL "+VIDEO_ID);
-        }*/
 
         if (!wasRestored) {
             Log.e("VIDEO ACTIVITY", "VIDEO ID IS NULL "+youtubeDataModel.getVideo_id());

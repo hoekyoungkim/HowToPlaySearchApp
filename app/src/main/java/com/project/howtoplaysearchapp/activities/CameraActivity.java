@@ -47,7 +47,6 @@ public class CameraActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
-        Log.e("Camera Activity","??????????????????");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             verifyStoragePermissions(this);
@@ -131,13 +130,6 @@ public class CameraActivity extends AppCompatActivity {
             startActivity(newIntent);
 
 
-            // ScanFile so it will be appeared on Gallery
-           /* MediaScannerConnection.scanFile(MainActivity.this,
-                    new String[]{imageUri.getPath()}, null,
-                    new MediaScannerConnection.OnScanCompletedListener() {
-                        public void onScanCompleted(String path, Uri uri) {
-                        }
-                    });*/
         }
     }
     public static void verifyStoragePermissions(Activity activity) {

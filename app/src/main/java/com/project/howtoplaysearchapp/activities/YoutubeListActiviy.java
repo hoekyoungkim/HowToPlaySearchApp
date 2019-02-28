@@ -13,7 +13,6 @@ import com.project.howtoplaysearchapp.R;
 
 
 public class YoutubeListActiviy extends AppCompatActivity{
-//    public class YoutubeListActiviy extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
 
 
     private TabLayout tabLayout = null;

@@ -37,7 +37,7 @@ import java.util.ArrayList;
  */
 public class YoutubeFragment extends Fragment {
 
-    private static String YOUTUBE_API_KEY = "AIzaSyAZmYPmEBf-8JqyAQGzFMhvzVOmrzhuF9o";
+    private static String YOUTUBE_API_KEY = ""; // Your API Key
     private static String query_start = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&order=date&q=How%20to%20play%20";
     private static String query_end = "&key=";
     private static String query = "";
